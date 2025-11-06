@@ -3,6 +3,11 @@
 import { useEffect, useState } from "react"
 import { Sparkles } from "@/components/sparkles"
 import AttendanceConfirmation from "@/components/sections/AttendanceConfirmation"
+import { quinceMainData } from "../sections/data/main-data"
+
+const { videoFondos } = quinceMainData;
+
+const receptionVideo = videoFondos.reception;
 
 interface ReceptionSceneProps {
   onComplete?: () => void
@@ -90,7 +95,7 @@ export function ReceptionScene({ onComplete, isActive = true }: ReceptionScenePr
           opacity: videoLoaded ? 1 : 0
         }}
       >
-        <source src="/video/gg3.mp4" type="video/mp4" />
+        <source src={receptionVideo.src} type="video/mp4" />
         {/* Fallback to image if video fails to load */}
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fotoVideo8-VbuMeeRnwH48b73enAL6llvNC1IKMQ.png"

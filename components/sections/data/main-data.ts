@@ -334,11 +334,56 @@ export const quinceMainData = {
   "¡Amigos del alma! Vengan a celebrar conmigo esta nueva etapa. ¡Será una fiesta increíble!",
     ]
   },
-  videoFondos: [
-    {
+  videoFondos: {
+   splash: {
       id: "splash",
-      src: "/video/quinceVideo1.mp4",
+      src: "/video/bgg2.mp4",
       type: "video/mp4",
-    }
-  ]
+    },
+    title: {
+      id: "title",
+      src: "/video/bgg3.mp4",
+      type: "video/mp4",
+    },
+    message1:{
+      id: "message1",
+      src: "/video/bgg4.mp4",
+      type: "video/mp4",
+    },
+    message2:{
+      id: "message2",
+      src: "/video/bgg5.mp4",
+      type: "video/mp4",
+    },
+    name: {
+      id: "name",
+      src: "/video/bgg6.mp4",
+      type: "video/mp4",
+    },
+    message3:{
+      id: "message3",
+      src: "/video/bgg7.mp4",
+      type: "video/mp4",
+    },
+    parents:{
+      id: "parents",
+      src: "/video/bgg1.mp4",
+      type: "video/mp4",
+    },
+    date:{
+      id: "date",
+      src: "/video/bgg2.mp4",
+      type: "video/mp4",
+    },
+    reception:{
+      id: "reception",
+      src: "/video/bgg4.mp4",
+      type: "video/mp4",
+    },
+    schedule:{
+      id: "schedule",
+      src: "/video/bgg3.mp4",
+      type: "video/mp4",
+    },
+  }
 };

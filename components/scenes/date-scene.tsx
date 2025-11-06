@@ -3,6 +3,11 @@
 import { useEffect, useState } from "react"
 import { Sparkles } from "@/components/sparkles"
 import GiftsSection from "@/components/sections/GiftsSection"
+import { quinceMainData } from "../sections/data/main-data"
+
+const { videoFondos } = quinceMainData;
+
+const dateVideo = videoFondos.date;
 
 interface DateSceneProps {
   onComplete?: () => void
@@ -70,7 +75,7 @@ export function DateScene({ onComplete, isActive = true }: DateSceneProps) {
           opacity: videoLoaded ? 1 : 0
         }}
       >
-        <source src="/video/gg8.mp4" type="video/mp4" />
+        <source src={dateVideo.src} type="video/mp4" />
         {/* Fallback to image if video fails to load */}
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fotoVideo7-gurPRtNhvTix6LQQCmEvsmec5HoLBm.png"

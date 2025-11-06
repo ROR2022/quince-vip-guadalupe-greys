@@ -3,6 +3,11 @@ import { Sparkles } from "@/components/sparkles";
 import { TypewriterText } from "@/components/typewriter-text";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import { quinceMainData } from "../sections/data/main-data";
+
+const { videoFondos } = quinceMainData;
+
+const titleVideo = videoFondos.title;
 
 interface TitleSceneProps {
   onComplete: () => void;
@@ -73,7 +78,7 @@ export function TitleScene({ onComplete, isActive }: TitleSceneProps) {
           transition: 'opacity 0.5s ease-in-out'
         }}
       >
-        <source src="/video/gg9.mp4" type="video/mp4" />
+        <source src={titleVideo.src} type="video/mp4" />
         {/* Fallback to image if video fails to load */}
         <div 
           className="absolute inset-0 w-full h-full"

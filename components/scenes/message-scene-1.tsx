@@ -2,6 +2,13 @@
 import { Sparkles } from "@/components/sparkles"
 import { TypewriterText } from "@/components/typewriter-text"
 import { useState, useEffect } from "react"
+import { quinceMainData } from "../sections/data/main-data"
+
+const { videoFondos } = quinceMainData;
+
+const message1Video = videoFondos.message1;
+
+
 
 interface MessageScene1Props {
   onComplete: () => void
@@ -96,7 +103,7 @@ export function MessageScene1({ onComplete, isActive }: MessageScene1Props) {
           transition: 'opacity 0.5s ease-in-out'
         }}
       >
-        <source src="/video/gg3.mp4" type="video/mp4" />
+        <source src={message1Video.src} type="video/mp4" />
         {/* Fallback to image if video fails to load */}
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fotoVideo2-Wm2VQWrwt1WtwvZvtaWlAId6zCG8iW.png"
@@ -129,7 +136,7 @@ export function MessageScene1({ onComplete, isActive }: MessageScene1Props) {
             <TypewriterText
               text={message}
               delay={80}
-              className="font-main-text text-2l md:text-3xl lg:text-4xl text-white text-center leading-relaxed drop-shadow-lg"
+              className="font-main-text text-2xl md:text-3xl lg:text-4xl text-white text-center leading-relaxed drop-shadow-lg"
               onComplete={handleTextComplete}
               isActive={true}
             />

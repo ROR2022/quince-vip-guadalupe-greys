@@ -3,8 +3,11 @@
 import { Sparkles } from "@/components/sparkles"
 import { useState, useEffect, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
+import { quinceMainData } from "../sections/data/main-data"
 
+const { videoFondos } = quinceMainData;
 
+const splashVideo= videoFondos.splash;
 interface SplashSceneProps {
   onStart: () => void
 }
@@ -96,7 +99,7 @@ function SplashSceneContent({ onStart }: SplashSceneProps) {
           transition: 'opacity 0.5s ease-in-out'
         }}
       >
-        <source src="/video/gg1.mp4" type="video/mp4" />
+        <source src={splashVideo.src} type="video/mp4" />
         {/* Fallback gradient if video fails to load */}
         <div 
           className="absolute inset-0 bg-gradient-to-br from-[#f5d5d8] via-[#e8c4c8] to-[#d4a5a8]"

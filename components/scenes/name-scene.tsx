@@ -4,6 +4,12 @@ import { Sparkles } from "@/components/sparkles"
 import { TypewriterText } from "@/components/typewriter-text"
 import { useState, useEffect } from "react"
 
+import { quinceMainData } from "../sections/data/main-data"
+
+const { videoFondos } = quinceMainData;
+
+const nameVideo = videoFondos.name
+
 interface NameSceneProps {
   onComplete: () => void
   isActive: boolean
@@ -86,7 +92,7 @@ export function NameScene({ onComplete, isActive }: NameSceneProps) {
           transition: 'opacity 0.5s ease-in-out'
         }}
       >
-        <source src="/video/gg5.mp4" type="video/mp4" />
+        <source src={nameVideo.src} type="video/mp4" />
         {/* Fallback to image if video fails to load */}
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fotoVideo4-Dhmx2pFAGiovwD1sVLQOUSie8Nndew.png"

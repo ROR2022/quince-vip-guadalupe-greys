@@ -4,6 +4,12 @@ import { useEffect, useState } from "react"
 import { TypewriterText } from "@/components/typewriter-text"
 import { Sparkles } from "@/components/sparkles"
 
+import { quinceMainData } from "../sections/data/main-data"
+
+const { videoFondos } = quinceMainData;
+
+const message3Video = videoFondos.message3;
+
 interface MessageScene3Props {
   onComplete?: () => void
   isActive?: boolean
@@ -110,7 +116,7 @@ export function MessageScene3({ onComplete, isActive = true }: MessageScene3Prop
           transition: 'opacity 0.5s ease-in-out'
         }}
       >
-        <source src="/video/gg6.mp4" type="video/mp4" />
+        <source src={message3Video.src} type="video/mp4" />
         {/* Fallback to image if video fails to load */}
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fotoVideo5-H2o3Q9PtL8Yas0yO418s6nTktcG7Xe.png"
