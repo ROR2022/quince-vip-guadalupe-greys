@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getServers } from 'dns';
 import connectDB from '@/lib/mongodb';
 import Guest from '@/models/Guest';
 
@@ -105,6 +106,7 @@ export async function GET(request: NextRequest) {
 // POST - Crear nuevo invitado
 export async function POST(request: NextRequest) {
   try {
+    console.log('[API/guests POST] DNS servers activos:', getServers());
     await connectDB();
     
     const body = await request.json();
