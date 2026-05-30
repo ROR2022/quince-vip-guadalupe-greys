@@ -8,15 +8,16 @@ import { quinceMainData } from "../sections/data/main-data"
 
 const { videoFondos, event } = quinceMainData;
 
-const message2Video = videoFondos.message2;
-const { parents } = event;
+const padrinos1Video = videoFondos.padrinos1;
+const { godparents } = event;
+const { bautizo } = godparents;
 
-interface MessageScene2Props {
+interface Padrinos1Props {
   onComplete: () => void
   isActive: boolean
 }
 
-export function MessageScene2({ onComplete, isActive }: MessageScene2Props) {
+export function Padrinos1({ onComplete, isActive }: Padrinos1Props) {
   const [firstTextComplete, setFirstTextComplete] = useState(false)
   const [secondTextComplete, setSecondTextComplete] = useState(false)
   const [thirdTextComplete, setThirdTextComplete] = useState(false)
@@ -26,18 +27,19 @@ export function MessageScene2({ onComplete, isActive }: MessageScene2Props) {
   const [videoLoaded, setVideoLoaded] = useState(false)
   const [videoError, setVideoError] = useState(false)
 
-  const firstMessage = "Mis Padres"
-  const secondMessage = parents.mother
-  const thirdMessage = parents.father
+  const firstMessage = "Mis Padrinos"
+  const secondMessage = bautizo.godfather
+  const thirdMessage = bautizo.godmother
+  
   
   // Handle video loading
   const handleVideoLoaded = () => {
-    console.log('MessageScene2 - Video loaded successfully')
+    console.log('Padrinos1 - Video loaded successfully')
     setVideoLoaded(true)
   }
 
   const handleVideoError = () => {
-    console.log('MessageScene2 - Video failed to load, using fallback')
+    console.log('Padrinos1 - Video failed to load, using fallback')
     setVideoError(true)
     setVideoLoaded(true) // Proceed with fallback image
   }
@@ -46,7 +48,7 @@ export function MessageScene2({ onComplete, isActive }: MessageScene2Props) {
   useEffect(() => {
     const fallbackTimer = setTimeout(() => {
       if (!videoLoaded) {
-        console.log('MessageScene2 - Video loading timeout, proceeding with fallback')
+        console.log('Padrinos1 - Video loading timeout, proceeding with fallback')
         setVideoLoaded(true)
       }
     }, 5000) // 5 second timeout
@@ -98,7 +100,7 @@ export function MessageScene2({ onComplete, isActive }: MessageScene2Props) {
           transition: 'opacity 0.5s ease-in-out'
         }}
       >
-        <source src={message2Video.src} type="video/mp4" />
+        <source src={padrinos1Video.src} type="video/mp4" />
         {/* Fallback to image if video fails to load */}
         <img
           src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fotoVideo3-fU4fQLXpKVDGkvxylef7pszW6qJCT8.png"

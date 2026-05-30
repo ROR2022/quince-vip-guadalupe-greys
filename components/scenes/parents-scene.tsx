@@ -5,7 +5,7 @@ import { TypewriterText } from "@/components/typewriter-text"
 import { Sparkles } from "@/components/sparkles"
 import { quinceMainData } from "../sections/data/main-data"
 
-const { videoFondos } = quinceMainData;
+const { videoFondos, details } = quinceMainData;
 
 const parentsVideo = videoFondos.parents;
 
@@ -29,11 +29,11 @@ export function ParentsScene({ onComplete, isActive = true }: ParentsSceneProps)
 
   
   const firstMessage = "Recepción"
-  const secondMessage = "La Casa de Mis Abuelos"
-  const thirdMessage = "20:00 hrs."
-  const fourthMessage = "Calle laurel núm. 13 manzana 6 col parque ecológico de Viveristas C.P. 39890 en Acapulco Gro."
-  const fifthMessage = "Baile y Fiesta"
-  const ubiLink = "https://maps.app.goo.gl/hFt9iVEnhERvNrk4A"
+  const secondMessage = details.party.venue
+  const thirdMessage = details.party.time
+  const fourthMessage = details.party.address
+  const fifthMessage = details.party.type
+  const ubiLink = details.party.ubiLink
 
   // Video loading handlers
   const handleVideoLoaded = () => {

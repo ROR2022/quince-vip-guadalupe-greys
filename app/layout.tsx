@@ -16,11 +16,11 @@ const openSans = Open_Sans({
   variable: "--font-body",
 })
 
-const { event } = quinceMainData;
+const { event, details } = quinceMainData;
 
 export const metadata: Metadata = {
   title: `Invitación a mis XV años - ${event.celebrant}`,
-  description: `Acompáñame a celebrar mis XV años el ${event.date.full}.`,
+  description: `Acompáñame a celebrar mis XV años el ${details.date.full}.`,
   generator: "",
 }
 

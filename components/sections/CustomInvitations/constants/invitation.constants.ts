@@ -6,16 +6,16 @@ import { EventInfo, RelationOption } from '../types/invitation.types';
 import { quinceMainData } from '@/components/sections/data/main-data';
 
 
-const { hero, customInvitations, event } = quinceMainData;
+const { hero, customInvitations, details } = quinceMainData;
 export const ADMIN_PASSWORD = customInvitations.adminPassword || "admin123";
 
 export const EVENT_INFO: EventInfo = {
   partyTitle: hero.subtitle || "Quinceañera de Frida",
   quinceaneraName: hero.name || "Aurora Valentina",
-  date: event.date.full || "Sábado 27 de Diciembre 2025",
-  time: event.ceremony.time || "7:00 PM",
-  venue: event.ceremony.venue || "Capellania de Nuestra Señora de Guadalupe",
-  dressCode: event.dressCode || "Formal - Azul solo la quinceañera -",
+  date: details.date.full || "Sábado 27 de Diciembre 2025",
+  time: details.ceremony.time || "7:00 PM",
+  venue: details.ceremony.venue || "Capellania de Nuestra Señora de Guadalupe",
+  dressCode: details.dressCode || "Formal - Azul solo la quinceañera -",
   invitationUrl: customInvitations.invitationUrl || "https://quince-vip-new-demo.vercel.app/"
 } as const;
 

@@ -1,6 +1,39 @@
+/**
+ * 
+ Nombre: Guadalupe Grey's 
+
+Padres: Cynthia Reyna González 
+Jose Guadalupe Fuentes Ortiz 
+
+Padrinos bautizo: lucia Araceli Ibarra González y Juan Pablo Martinez Sustaita 
+
+Padrinos confirmación: Juan Antonio García Colunga y
+ Laura Lidia De la Rosa Ramírez 
+
+Hermanas 
+Cynthia yumira 
+Carolina Yamely 
+Selena Kyabeth
+
+Sábado 22 de Agosto del 2026
+
+Hora 6 pm
+Iglesia: San Juan de los lagos 
+Morenita mia #2200
+Roble San Nicolás 
+San Nicolás del los Garza NL
+
+Recepción 
+Castillo Eventos 7:15
+Salón Elegance 
+Dirección Miguel Hidalgo y Costilla #800 sur
+Centro San Nicolás de los Garza NL
+ 
+*/
+
 export const quinceMainData = {
   hero: {
-    name: "Guadalupe Greys",
+    name: "Guadalupe Grey's",
     subtitle: "¡Mis XV años!",
     backgroundImage: "/images/quince3.jpeg",
     quote:
@@ -18,11 +51,10 @@ export const quinceMainData = {
     backgroundImage: "/images/aurora_1.jpeg",
   },
   event: {
-    celebrant: "Guadalupe Greys",
-    //Padres María de Jesús Gutiérrez y Andres Ramírez
+    celebrant: "Guadalupe Grey's",
     parents: {
-      father: "Andres Martínez",
-      mother: "Maria de Jesús Sanchez",
+      father: "Jose Guadalupe Fuentes Ortiz",
+      mother: "Cynthia Reyna González",
       message: `Hoy, mi corazón rebosa de gratitud. 
                 Doy gracias a Dios por cada paso de mi vida y a mis padres  
                 por cuidarme y guiarme en este camino.
@@ -32,17 +64,34 @@ export const quinceMainData = {
     },
     //Padrino Ma. Asunción Ramirez y Juan Gutiérrez
     godparents: {
+      bautizo:{
+        godfather: "Juan Pablo Martinez Sustaita",
+        godmother: "Lucia Araceli Ibarra González",
+      },
+      confirmation:{
+        godfather: "Juan Antonio García Colunga",
+        godmother: "Laura Lidia De la Rosa Ramírez",
+      },
+    },
+    padrinosEspeciales: {
       godfather: "Juan Hernández",
       godmother: "Ma. Asunción Jiménez",
     },
+    hermanas: [
+      "Cynthia Yumira",
+      "Carolina Yamely",
+      "Selena Kyabeth",
+    ],
+  },
+  details: {
     date: {
-      full: "Sábado 15 de Noviembre 2025",
-      isoDate: "2025-11-15T13:00:00",
+      full: "Sábado 22 de Agosto 2026",
+      isoDate: "2026-08-22T18:00:00",
       day: "Sábado",
-      dayNumber: "15",
-      month: "Noviembre",
-      year: "2025",
-      date: "15 de Noviembre 2025",
+      dayNumber: "22",
+      month: "Agosto",
+      year: "2026",
+      date: "22 de Agosto 2026",
       mensaje1: "¡La cuenta regresiva ha comenzado!",
       mensaje2: "TAN SOLO FALTAN",
       backgroundCarrouselImages: [
@@ -54,19 +103,19 @@ export const quinceMainData = {
         "/images/quinceAzul6.jpg",
       ],
     },
-    //Misa a la 1pm parroquia Santa fe de Guadalupe, la Sauceda Guanajuato.
+    
     ceremony: {
-      time: "13:00 hrs.",
-      venue: "Parroquia Santa Fe de Guadalupe",
-      address: "Santa fe de Guadalupe, la Sauceda Guanajuato.",
+      time: "18:00 hrs.",
+      venue: "Parroquia San Juan de los Lagos",
+      address: "Morenita mía #2200, Roble, San Nicolás de los Garza NL",
       type: "Misa de Acción de Gracias",
       ubiLink: "https://maps.app.goo.gl/WfeVYukpQg3CWC2T8",
       ceremonyImage: "/images/quince6.jpeg",
     },
     party: {
-      time: "14:00 hrs.",
-      venue: "Salón Texano",
-      address: "Santa fe de Guadalupe, la Sauceda Guanajuato.",
+      time: "19:20 hrs.",
+      venue: "Castillo Eventos Salón Elegance",
+      address: "Miguel Hidalgo y Costilla #800 sur, Centro, San Nicolás de los Garza NL",
       type: "Recepción",
       ubiLink: "https://maps.app.goo.gl/qNFsbPPuwyCSMUim9",
     },
@@ -355,9 +404,19 @@ export const quinceMainData = {
       src: "/video/bgg5.mp4",
       type: "video/mp4",
     },
+    padrinos1:{
+      id: "padrinos1",
+      src: "/video/bgg6.mp4",
+      type: "video/mp4",
+    },
+    padrinos2:{
+      id: "padrinos2",
+      src: "/video/bgg4.mp4",
+      type: "video/mp4",
+    },
     name: {
       id: "name",
-      src: "/video/bgg6.mp4",
+      src: "/video/bgg2.mp4",
       type: "video/mp4",
     },
     message3:{
