@@ -10,7 +10,7 @@ const { videoFondos, event } = quinceMainData;
 
 const padrinos2Video = videoFondos.padrinos2;
 const { godparents } = event;
-const { bautizo } = godparents;
+const { confirmation } = godparents;
 
 interface Padrinos2Props {
   onComplete: () => void
@@ -28,8 +28,8 @@ export function Padrinos2({ onComplete, isActive }: Padrinos2Props) {
   const [videoError, setVideoError] = useState(false)
 
   const firstMessage = "Mis Padrinos"
-  const secondMessage = bautizo.godfather
-  const thirdMessage = bautizo.godmother
+  const secondMessage = confirmation.godfather
+  const thirdMessage = confirmation.godmother
   
   
   // Handle video loading

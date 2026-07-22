@@ -45,6 +45,15 @@ export const quinceMainData = {
       "/images/quince4.jpeg",
     ],
   },
+  splash: {
+    images: [
+      "/fotos/greys01.jpeg",
+      "/fotos/greys02.jpeg",
+      "/fotos/greys03.jpeg",
+      "/fotos/greys04.jpeg",
+      "/fotos/greys05.jpeg",
+    ],
+  },
   welcomeSection: {
     message:
       "Con mucha alegría y emoción, te invito a celebrar mis XV años. Será un día lleno de magia, amor y momentos inolvidables. ¡Espero contar con tu presencia para hacer de este día algo realmente especial!",
