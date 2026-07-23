@@ -38,7 +38,7 @@ const BackgroundCarrousel = ({images}) => {
               : "opacity-0"
           }`}
           style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('${image}')`,
+            backgroundImage: `url('${image}')`,
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
