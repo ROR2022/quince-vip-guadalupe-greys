@@ -1,0 +1,53 @@
+export interface InvitedGuest {
+  name: string;
+  numberOfGuests: number;
+}
+
+// Lista harcodeada de invitados: acceso vía ?id=001
+// numberOfGuests en 0 = pendiente de definir número de pases
+export const invitedGuests: Record<string, InvitedGuest> = {
+  "001": { name: "Sra. Araceli Ibarra González y familia", numberOfGuests: 7 },
+  "002": { name: "Sr. Estela Tapia Reséndiz", numberOfGuests: 3 },
+  "003": { name: "Sra. Lucy Muñoz Cepeda", numberOfGuests: 3 },
+  "004": { name: "Sra. Olga Delgadillo Hernández", numberOfGuests: 2 },
+  "005": { name: "Sra. Raquel de la Cruz", numberOfGuests: 4 },
+  "006": { name: "Sra. Abigail Soto García y familia", numberOfGuests: 0 },
+  "007": { name: "Sra. Guadalupe Sarmiento", numberOfGuests: 2 },
+  "008": { name: "Sr. Leonardo Flores y familia", numberOfGuests: 0 },
+  "009": { name: "Sra. Karla Gámez y familia", numberOfGuests: 0 },
+  "010": { name: "Sra. Susana Amaro", numberOfGuests: 4 },
+  "011": { name: "Mariela Hernández Pérez y familia", numberOfGuests: 0 },
+  "012": { name: "Sr. Mario Campos Jerónimo y familia", numberOfGuests: 0 },
+  "013": { name: "Sra. Judith Campos Jerónimo y familia", numberOfGuests: 0 },
+  "014": { name: "Sr. Jesús Campos Jerónimo y familia", numberOfGuests: 0 },
+  "015": { name: "Familia Salinas Dávila", numberOfGuests: 0 },
+  "016": { name: "Sra. Rosalinda Campos", numberOfGuests: 3 },
+  "017": { name: "Sra. Carolina Escobedo Navarrete y familia", numberOfGuests: 0 },
+  "018": { name: "Sra. Gloria Ortiz", numberOfGuests: 4 },
+  "019": { name: "Sra. Blanca Reyna y familia", numberOfGuests: 0 },
+  "020": { name: "Sr. Juan Antonio García y familia", numberOfGuests: 0 },
+  "021": { name: "Sra. Maribel Gallegos y familia", numberOfGuests: 0 },
+  "022": { name: "Sra. San Juanita Franco Sánchez", numberOfGuests: 3 },
+  "023": { name: "Srita. Odilia Gallegos Martínez y familia", numberOfGuests: 0 },
+  "024": { name: "Familia Rodríguez Martínez", numberOfGuests: 5 },
+  "025": { name: "Sra. Patricia Morales y familia", numberOfGuests: 0 },
+  "026": { name: "Sra. Marisela García de la Rosa y familia", numberOfGuests: 0 },
+  "027": { name: "Teresa Escobedo Ibarra", numberOfGuests: 2 },
+  "028": { name: "Familia Salinas González", numberOfGuests: 3 },
+  "029": { name: "Sra. Esperanza Herrera y familia", numberOfGuests: 0 },
+  "030": { name: "Sr. Alejandro Sosa", numberOfGuests: 4 },
+  "031": { name: "Sra. Carmela Gallegos Martínez", numberOfGuests: 5 },
+  "032": { name: "Sr. Emilio Martínez Ibarra y familia", numberOfGuests: 0 },
+  "033": { name: "Srita. Jovita Villarreal Tamez", numberOfGuests: 2 },
+  "034": { name: "Sra. Irene Pérez Cerezero", numberOfGuests: 4 },
+  "035": { name: "Sr. Omar Flores Ibarra", numberOfGuests: 3 },
+  "036": { name: "Srita. Rosaura Álvarez y familia", numberOfGuests: 0 },
+  "037": { name: "Familia Cortés González", numberOfGuests: 0 },
+  "038": { name: "Sra. Ely Piña y familia", numberOfGuests: 0 },
+  "039": { name: "Sra. Elena Segovia", numberOfGuests: 0 },
+  "040": { name: "Familia Reyna Martínez", numberOfGuests: 0 },
+  "041": { name: "Sr. Daniel Pérez Urazanda y familia", numberOfGuests: 0 },
+  "042": { name: "Sr. Jorge Ramírez y familia", numberOfGuests: 0 },
+  "043": { name: "Sr. Diego Sánchez Rodríguez y familia", numberOfGuests: 0 },
+  "044": { name: "Jóvenes Invitados", numberOfGuests: 2 },
+};

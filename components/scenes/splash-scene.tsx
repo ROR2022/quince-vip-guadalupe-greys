@@ -2,9 +2,10 @@
 
 import { Sparkles } from "@/components/sparkles";
 import BackgroundCarrousel from "@/components/sections/BackgroundCarrousel";
-import { useState, useEffect, Suspense } from "react";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { quinceMainData } from "../sections/data/main-data";
+import { invitedGuests } from "../sections/data/invited-guests";
 
 const { splash } = quinceMainData;
 
@@ -14,46 +15,10 @@ interface SplashSceneProps {
 }
 
 function SplashSceneContent({ onStart }: SplashSceneProps) {
-  const [dataInvitation, setDataInvitation] = useState<any>(null);
   const searchParams = useSearchParams();
-  const guestParam = searchParams.get("guest") || "";
-
-  useEffect(() => {
-    if (guestParam && guestParam.trim() !== "") {
-      //console.log(`Guest parameter detected: ${guestParam}`)
-      // Fetch data based on guest parameter
-      fetchDataForGuest(guestParam);
-    }
-  }, [guestParam]);
-
-  const fetchDataForGuest = async (guest: string) => {
-    try {
-      const response = await fetch(`/api/guests/${guest}`);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const data = await response.json();
-      //console.log('Fetched guest data:', data);
-      const guestName = data.data.name;
-      const personalInvitation = data.data.personalInvitation;
-      const numberOfGuests = personalInvitation.numberOfGuests;
-      const specialMessage = personalInvitation.message;
-      console.log(`Guest Name: ${guestName}`);
-      //console.log(`Personal Invitation:`, personalInvitation);
-      console.log(`Number of Guests Allowed: ${numberOfGuests}`);
-      console.log(`Special Message: ${specialMessage}`);
-      if (guestName) {
-        setDataInvitation({
-          guestName,
-          numberOfGuests,
-          specialMessage,
-        });
-      }
-      // You can use this data to customize the experience further
-    } catch (error) {
-      console.error("Error fetching guest data:", error);
-    }
-  };
+  const guestId = searchParams.get("id") || "";
+  const dataInvitation = guestId ? invitedGuests[guestId] : undefined;
+  const numberOfGuests = dataInvitation ? dataInvitation.numberOfGuests : 0;
 
   return (
     <div
@@ -90,18 +55,13 @@ function SplashSceneContent({ onStart }: SplashSceneProps) {
             {dataInvitation && (
               <div>
                 <p className="relative text-2xl md:text-3xl text-white font-medium drop-shadow-lg">
-                  Bienvenid@, {dataInvitation.guestName}!
+                  Bienvenid@, {dataInvitation.name}!
                 </p>
-                {dataInvitation.specialMessage && (
-                  <p className="relative mt-2 text-lg md:text-xl text-white font-light italic drop-shadow-lg">
-                    "{dataInvitation.specialMessage}"
-                  </p>
-                )}
-                {dataInvitation.numberOfGuests && (
+                {numberOfGuests > 0 && (
                   <div className="relative mt-2">
                     <p className="relative text-lg md:text-xl text-white font-bold drop-shadow-lg">
-                      Pase para: {dataInvitation.numberOfGuests} invitado
-                      {dataInvitation.numberOfGuests > 1 ? "s" : ""}.
+                      Pase para: {numberOfGuests} invitado
+                      {numberOfGuests > 1 ? "s" : ""}.
                     </p>
                   </div>
                 )}
