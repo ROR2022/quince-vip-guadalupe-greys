@@ -118,7 +118,7 @@ export const quinceMainData = {
       venue: "Parroquia San Juan de los Lagos",
       address: "Morenita mía #2200, Roble, San Nicolás de los Garza NL",
       type: "Misa de Acción de Gracias",
-      ubiLink: "https://maps.app.goo.gl/WfeVYukpQg3CWC2T8",
+      ubiLink: "https://maps.app.goo.gl/SsFFZBANLNUAxWc87",
       ceremonyImage: "/images/quince6.jpeg",
     },
     party: {
@@ -126,7 +126,7 @@ export const quinceMainData = {
       venue: "Castillo Eventos Salón Elegance",
       address: "Miguel Hidalgo y Costilla #800 sur, Centro, San Nicolás de los Garza NL",
       type: "Recepción",
-      ubiLink: "https://maps.app.goo.gl/qNFsbPPuwyCSMUim9",
+      ubiLink: "https://maps.app.goo.gl/FJ2BKKuXvULFtekz7",
     },
     dressCode: "Formal - Rosa solo la quinceañera",
     restrictions: "",
