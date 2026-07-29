@@ -44,10 +44,11 @@ export const invitedGuests: Record<string, InvitedGuest> = {
   "036": { name: "Srita. Rosaura Álvarez y familia", numberOfGuests: 0 },
   "037": { name: "Familia Cortés González", numberOfGuests: 0 },
   "038": { name: "Sra. Ely Piña y familia", numberOfGuests: 0 },
-  "039": { name: "Sra. Elena Segovia", numberOfGuests: 0 },
-  "040": { name: "Familia Reyna Martínez", numberOfGuests: 0 },
+  "039": { name: "Sra. Elena Segovia", numberOfGuests: 2 },
+  "040": { name: "Familia Reyna Martínez", numberOfGuests: 4 },
   "041": { name: "Sr. Daniel Pérez Urazanda y familia", numberOfGuests: 0 },
   "042": { name: "Sr. Jorge Ramírez y familia", numberOfGuests: 0 },
   "043": { name: "Sr. Diego Sánchez Rodríguez y familia", numberOfGuests: 0 },
   "044": { name: "Jóvenes Invitados", numberOfGuests: 2 },
+  "045": { name: "Maria Guadalupe De la cruz Martínez", numberOfGuests: 4 },
 };

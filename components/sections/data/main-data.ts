@@ -79,7 +79,7 @@ export const quinceMainData = {
       },
       confirmation:{
         godfather: "Juan Antonio García Colunga",
-        godmother: "Laura Lidia De la Rosa Ramírez",
+        godmother: "Laura Lidia Ramírez De la Rosa",
       },
     },
     padrinosEspeciales: {
